@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Project2_403.Models.DeviceReference>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DeviceModel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeviceBrand)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeviceColor)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeviceCapacity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeviceBattery)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DeviceDescription)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeviceModel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeviceBrand)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeviceColor)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeviceCapacity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeviceBattery)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DeviceDescription)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DeviceReferenceId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DeviceReferenceId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DeviceReferenceId })
+        </td>
+    </tr>
+}
+
+</table>

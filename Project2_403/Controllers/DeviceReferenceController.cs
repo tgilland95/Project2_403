@@ -10,108 +10,107 @@ using Project2_403.Models;
 
 namespace Project2_403.Controllers
 {
-    public class DevicesController : Controller
+    public class DeviceReferenceController : Controller
     {
         private RepairsContext db = new RepairsContext();
 
-        // GET: Devices
-        //List different device types
+        // GET: DeviceReference
         public ActionResult Index()
         {
-            return View(db.Devices.ToList());
+            return View(db.deviceReference.ToList());
         }
 
-        // GET: Devices/Details/5
+        // GET: DeviceReference/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Device device = db.Devices.Find(id);
-            if (device == null)
+            DeviceReference deviceReference = db.deviceReference.Find(id);
+            if (deviceReference == null)
             {
                 return HttpNotFound();
             }
-            return View(device);
+            return View(deviceReference);
         }
 
-        // GET: Devices/Create
+        // GET: DeviceReference/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Devices/Create
+        // POST: DeviceReference/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "DeviceId,DeviceBrand,DeviceModel,DeviceColor,DeviceMemory")] Device device)
+        public ActionResult Create([Bind(Include = "DeviceReferenceId,DeviceModel,DeviceBrand,DeviceColor,DeviceCapacity,DeviceBattery,DeviceDescription")] DeviceReference deviceReference)
         {
             if (ModelState.IsValid)
             {
-                db.Devices.Add(device);
+                db.deviceReference.Add(deviceReference);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(device);
+            return View(deviceReference);
         }
 
-        // GET: Devices/Edit/5
+        // GET: DeviceReference/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Device device = db.Devices.Find(id);
-            if (device == null)
+            DeviceReference deviceReference = db.deviceReference.Find(id);
+            if (deviceReference == null)
             {
                 return HttpNotFound();
             }
-            return View(device);
+            return View(deviceReference);
         }
 
-        // POST: Devices/Edit/5
+        // POST: DeviceReference/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "DeviceId,DeviceBrand,DeviceModel,DeviceColor,DeviceMemory")] Device device)
+        public ActionResult Edit([Bind(Include = "DeviceReferenceId,DeviceModel,DeviceBrand,DeviceColor,DeviceCapacity,DeviceBattery,DeviceDescription")] DeviceReference deviceReference)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(device).State = EntityState.Modified;
+                db.Entry(deviceReference).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(device);
+            return View(deviceReference);
         }
 
-        // GET: Devices/Delete/5
+        // GET: DeviceReference/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Device device = db.Devices.Find(id);
-            if (device == null)
+            DeviceReference deviceReference = db.deviceReference.Find(id);
+            if (deviceReference == null)
             {
                 return HttpNotFound();
             }
-            return View(device);
+            return View(deviceReference);
         }
 
-        // POST: Devices/Delete/5
+        // POST: DeviceReference/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Device device = db.Devices.Find(id);
-            db.Devices.Remove(device);
+            DeviceReference deviceReference = db.deviceReference.Find(id);
+            db.deviceReference.Remove(deviceReference);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

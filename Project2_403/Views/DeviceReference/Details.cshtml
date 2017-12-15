@@ -1,0 +1,66 @@
+﻿@model Project2_403.Models.DeviceReference
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DeviceReference</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DeviceModel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeviceModel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeviceBrand)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeviceBrand)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeviceColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeviceColor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeviceCapacity)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeviceCapacity)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeviceBattery)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeviceBattery)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeviceDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeviceDescription)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DeviceReferenceId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
