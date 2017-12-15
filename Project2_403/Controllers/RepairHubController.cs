@@ -10,6 +10,7 @@ using Project2_403.Models;
 
 namespace Project2_403.Controllers
 {
+    [Authorize]
     public class RepairHubController : Controller
     {
 

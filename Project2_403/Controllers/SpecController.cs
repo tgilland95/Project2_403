@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace Project2_403.Controllers
 {
+    [Authorize]
     public class SpecController : Controller
     {
         private RepairsContext db = new RepairsContext();
