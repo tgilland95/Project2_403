@@ -25,15 +25,15 @@ namespace Project2_403.Models
 
 	}
 
-    public class Brand
-    {
-        [Key]
-        public int BrandId { get; set; }
-        [Required]
-        [Display(Name = "Brand Name")]
-        public string BrandName { get; set; }
+	public class Brand
+	{
+		[Key]
+		public int BrandId { get; set; }
+		[Required]
+		[Display(Name = "Brand Name")]
+		public string BrandName { get; set; }
 
-    }
+	}
 
 
 	public class Device
@@ -113,6 +113,36 @@ namespace Project2_403.Models
 		public string PhoneNumber { get; set; }
 
 	}
+
+	public class DeviceReference
+	{
+		[Key]
+		[Required]
+		public int DeviceReferenceId { get; set; }
+
+		[Required]
+		public string DeviceModel { get; set; }
+
+		[Required]
+		public string DeviceBrand { get; set; }
+
+		[Required]
+		[Display(Name = "Device Color")]
+		public string DeviceColor { get; set; }
+
+
+		
+		[Required] 
+		[Display(Name = "Capacity")]
+		public string DeviceCapacity {get; set;} 
+		
+		[Required] 
+		[Display(Name = "Battery")]
+		public int DeviceBattery {get; set;} 
+		[Required]
+		public string DeviceDescription { get; set; }
+	}
+
 
 
 
