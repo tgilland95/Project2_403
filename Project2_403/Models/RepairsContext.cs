@@ -23,7 +23,7 @@ namespace Project2_403.Models
         public DbSet<Device> Devices { get; set; }
         public DbSet<RepairInfoModel> RepairInfoRecords { get; set; }
         public DbSet<CustomerInfoModel> CustomerInfoRecords { get; set; }
-        public DbSet<RepairsModels> Repair { get; set; }
+        public DbSet<RepairRecord> Repair { get; set; }
 
     }
 }

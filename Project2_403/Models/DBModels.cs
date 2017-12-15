@@ -8,7 +8,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace Project2_403.Models
 {
-	public class RepairsModels
+	public class RepairRecord
 	{
 		[Key]
 		public int RepairRecordId
@@ -22,7 +22,6 @@ namespace Project2_403.Models
 		public CustomerInfoModel customerInfo = new CustomerInfoModel();
 		public string RepairStatus { get; set; }
 		public string RepairComments { get; set; }
-
 	}
 
 	public class Brand
