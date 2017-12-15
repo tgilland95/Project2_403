@@ -8,10 +8,11 @@
 {
     @Html.AntiForgeryToken()
     
+    <!--New Repair Form.  Used as a partial view on the RepairHub Page.-->
     <div class="form-horizontal">
         <h4>Repair Check-in</h4>
         <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.ValidationSummary(true, "OMG error", new { @class = "text-danger" })
         <div class="form-group">
             @Html.LabelFor(model => model.FirstName, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
