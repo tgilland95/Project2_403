@@ -1,4 +1,5 @@
-﻿@model IEnumerable<Project2_403.Models.DeviceReference>
+﻿@*This page displays useful mobile device data for employees to reference as needed*@
+@model IEnumerable<Project2_403.Models.DeviceReference>
 @{
     ViewBag.Title = "SpecSheet";
 }
@@ -7,6 +8,7 @@
 
 <div class="container">
     
+    @*Pull all data from device reference model and display it*@
     @foreach (var item in Model)
     {
         <div class="col-md-4" style="margin: 7px; border-radius:10px; background-color:#c4c4c4">
