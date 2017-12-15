@@ -14,11 +14,13 @@ namespace Project2_403.Controllers
         
         public ActionResult SpecSheet()
         {
+            //create device reference object and fill use SQL query to fill it with all data in the device reference table
             IEnumerable<DeviceReference> deviceReference =
                 db.Database.SqlQuery<DeviceReference>(
             "SELECT * FROM DeviceReferences");
 
 
+            //pass all device reference data to view
             return View(deviceReference);
         }
     }
