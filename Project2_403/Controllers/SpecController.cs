@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project2_403.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,16 @@ namespace Project2_403.Controllers
 {
     public class SpecController : Controller
     {
-        // GET: Spec
+        private RepairsContext db = new RepairsContext();
+        
         public ActionResult SpecSheet()
         {
-            return View();
+            IEnumerable<DeviceReference> deviceReference =
+                db.Database.SqlQuery<DeviceReference>(
+            "SELECT * FROM DeviceReferences");
+
+
+            return View(deviceReference);
         }
     }
 
