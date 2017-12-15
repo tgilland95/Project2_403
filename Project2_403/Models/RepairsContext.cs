@@ -18,7 +18,7 @@ namespace Project2_403.Models
         public RepairsContext() : base("DefaultConnection")
         {
         }
-
+        public DbSet<Brand> Brands { get; set; }
         public DbSet<Device> Devices { get; set; }
         public DbSet<RepairInfoModel> RepairInfoRecords { get; set; }
         public DbSet<CustomerInfoModel> CustomerInfoRecords { get; set; }

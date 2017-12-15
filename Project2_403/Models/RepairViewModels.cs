@@ -10,13 +10,8 @@ namespace Project2_403.Models
 {
      public class RepairInfoViewModel
     {
-        public Guid Id
-        {
+        public int Id { get; set; }
 
-            get { return Id; }
-            set { Id = new Guid(); }
-
-        }
 
         [Required]
         [Display(Name = "Serial Number")]
@@ -49,13 +44,9 @@ namespace Project2_403.Models
     public class RepairViewModel
     {
 
-        public Guid Id
-        {
+        public int Id { get; set; }
 
-            get { return Id; }
-            set { Id = new Guid(); }
-
-        }
+        
 
         [Required]
         [Display(Name = "First Name")]
