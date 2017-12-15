@@ -8,10 +8,11 @@ using System.Web.UI.WebControls;
 using System.Data.Sql;
 using Project2_403.Models;
 
+
 namespace Project2_403.Controllers
 {
 
-    RepairRecord r = new RepairRecord();
+
     public class RepairHubController : Controller
     {
         private RepairsContext db = new RepairsContext();
@@ -22,7 +23,6 @@ namespace Project2_403.Controllers
         public ActionResult Index()
         {
             
-
             return View();
         }
 
