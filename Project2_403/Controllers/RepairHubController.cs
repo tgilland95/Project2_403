@@ -14,6 +14,7 @@ namespace Project2_403.Controllers
     {
 
         // GET: RepairHub
+        [Authorize]
         public ActionResult Index()
         {
             return View();
