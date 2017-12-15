@@ -1,0 +1,50 @@
+﻿@model Project2_403.Models.Device
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Device</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DeviceBrand)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeviceBrand)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeviceModel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeviceModel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeviceColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeviceColor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeviceMemory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeviceMemory)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DeviceId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

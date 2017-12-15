@@ -1,0 +1,91 @@
+﻿body {
+    padding-top: 80px;
+    padding-bottom: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/*Change Navbar color to the color of TOA's website*/
+.navbar-color 
+{
+    background-color: #373737;
+}
+
+
+/*Set size of brand logo*/
+.navbar-brand {
+    padding: 8px 5px;
+    height: 80px;
+    line-height: 80px;
+}
+
+.navbar-toggle {
+    /* (80px - button height 34px) / 2 = 23px */
+    margin-top: 23px;
+    padding: 9px 10px !important;
+}
+
+@media (min-width: 768px) {
+    .navbar-nav > li > a {
+        /* (80px - line-height of 27px) / 2 = 26.5px */
+        padding-top: 26.5px;
+        padding-bottom: 26.5px;
+        line-height: 27px;
+    }
+}
+
+.login-box {
+    display: block;
+    max-width:fit-content;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    background-color: #373737;
+    padding: 30px;
+    border-radius: 16px
+}
+.login-box li, .btn {
+    margin: auto;
+    list-style: none;
+    display: block;
+    padding: 10px;
+    width: fit-content;
+
+}
+.login-box h2{
+    display: inline-block;
+}
+
+.login-box ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.repair-btn {
+    text-align: left;
+    margin: 20px;
+}
+
+.text-color{
+    color:white;
+    font-family: 'Lato', sans-serif;
+}

@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Login_Layout.cshtml";
+}
+
+
+
+<div class="container login-box">
+    <img src="~/Content/images/logo.png" alt="Alternate Text" />
+    <form class="form-inline">
+        
+        <ul>
+            <li>
+                <h2>Please Login to Continue</h2>
+            </li>
+            <li >
+                <label class="sr-only" for="email">User Name</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email">
+            </li>
+            
+            <li >
+                <label class="sr-only" for="pwd">Password</label> <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+            </li>
+            <li class="checkbox">
+                
+                <label><input type="checkbox">Remember me</label>
+            </li>
+
+            <br />
+            <br />
+            <br/>
+            @Html.ActionLink("Log in", "Index", "Home", null, new {@class = "btn btn-danger btn-lg"})
+        </ul>
+    </form>
+</div>
