@@ -16,7 +16,6 @@ namespace Project2_403.Models
 			get;
 			set;
 		}
-
 		public Device Device = new Device();
 		public RepairInfoModel RepairInfo = new RepairInfoModel();
 		public CustomerInfoModel customerInfo = new CustomerInfoModel();

@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Core.Mapping;
+using System.Data.Entity.Core.Metadata.Edm;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Web;
 
@@ -25,5 +28,7 @@ namespace Project2_403.Models
         public DbSet<CustomerInfoModel> CustomerInfoRecords { get; set; }
         public DbSet<RepairRecord> Repair { get; set; }
 
+        public System.Data.Entity.DbSet<Project2_403.Models.RepairRecordVM> RepairRecordVMs { get; set; }
     }
+
 }

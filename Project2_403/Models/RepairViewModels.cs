@@ -87,4 +87,21 @@ namespace Project2_403.Models
 
 
     }
+
+    public class RepairRecordVM
+    {
+        public RepairRecord _rr = new RepairRecord();
+        [Key]
+        public int RepairRecordVMId { get; set; }
+        public RepairRecordVM()
+        {
+            this._rr.RepairInfo = new RepairInfoModel();
+            this._rr.customerInfo = new CustomerInfoModel();
+            this._rr.Device = new Device();
+        }
+
+
+    }
+
+
 }

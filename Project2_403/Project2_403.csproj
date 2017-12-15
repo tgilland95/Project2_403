@@ -197,6 +197,7 @@
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\RepairHubController.cs" />
+    <Compile Include="Controllers\RepairRecordsController.cs" />
     <Compile Include="Controllers\SpecController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -206,6 +207,7 @@
     <Compile Include="Models\IdentityContext.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\DBModels.cs" />
+    <Compile Include="Models\RepairsContext.Views.cs" />
     <Compile Include="Models\RepairViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -355,6 +357,14 @@
     <Content Include="Views\Brands\Details.cshtml" />
     <Content Include="Views\Brands\Edit.cshtml" />
     <Content Include="Views\Brands\Index.cshtml" />
+    <Content Include="Views\RepairHub\NewCust.cshtml" />
+    <Content Include="Views\RepairRecords\Create.cshtml" />
+    <Content Include="Views\RepairRecords\Delete.cshtml" />
+    <Content Include="Views\RepairRecords\Details.cshtml" />
+    <Content Include="Views\RepairRecords\Edit.cshtml" />
+    <Content Include="Views\RepairRecords\Index.cshtml" />
+    <Content Include="Views\RepairHub\RepairInfoPartial.cshtml" />
+    <Content Include="Views\RepairHub\RepairRecordVMs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
