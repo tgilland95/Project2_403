@@ -2,6 +2,18 @@
     ViewBag.Title = "Home Page";
 }
 
+<!--
+    This project is designed to simplify the device repair process for Tricked Out Accessories, a phone accessories and repair company.  
+    Their current system only uses paper documents and is very unorganized.  This application should allow employees to enter repair forms with
+    information about the devices they are repairing and the customers who own those devices.  It should also allow managers to see all repairs
+    in progress and allow them to update their knowledge base (Or Tech Specs) of phones.  
+
+    All users are required to login before viewing any of this data - either through individual logins or through OAuth - because this is not a 
+    client-facing application.  It is solely for the use of company employees
+    -->
+
+
+
 <div class="jumbotron">
     <h1>Repair Tracker</h1>
     <p class="lead">Create, modify, track, and reference repairs here.</p>
@@ -9,6 +21,7 @@
 
     <div class="row">
         <div class="col-md-4">
+            <!--These buttons take the user to the other main pages of the application-->
                 @Html.ActionLink("Repair Hub", "Index", "RepairHub", null, new { @class = "btn btn-danger btn-block", @style="width: 250px"}) 
        
                 @Html.ActionLink("Tech Specs", "SpecSheet", "Spec", null, new { @class = "btn btn-danger btn-block", @style = "width: 250px" })
