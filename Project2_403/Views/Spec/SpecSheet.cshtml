@@ -1,10 +1,26 @@
-﻿@{
+﻿@model IEnumerable<Project2_403.Models.DeviceReference>
+@{
     ViewBag.Title = "SpecSheet";
 }
 
 <h2>Phone Technical Specifications Reference</h2>
 
-
+<div class="container">
+    
+    @foreach (var item in Model)
+    {
+        <div class="col-md-4" style="margin: 7px; border-radius:10px; background-color:#c4c4c4">
+            <br />
+            <b>Device Name&emsp;&emsp;&emsp;</b>@item.DeviceModel<br />
+            <b>Brand &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</b>@item.DeviceBrand<br />
+            <b>Device Capacity &emsp; </b>@item.DeviceCapacity<br />
+            <b>Device Color &emsp;&emsp;&emsp;</b>@item.DeviceColor<br />
+            <b>Device Battery &emsp; &emsp;</b>@item.DeviceBattery<br />
+            <b>Device Description </b>@item.DeviceDescription<br />
+            <br />
+        </div>
+    }
+</div>
 
 
 

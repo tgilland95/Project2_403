@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Project2_403.Models;
+using System.Data.Entity;
 
 namespace Project2_403
 {
@@ -12,6 +14,8 @@ namespace Project2_403
     {
         protected void Application_Start()
         {
+            Database.SetInitializer<RepairsContext>(null);
+
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
