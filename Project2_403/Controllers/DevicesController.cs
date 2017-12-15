@@ -15,6 +15,7 @@ namespace Project2_403.Controllers
         private RepairsContext db = new RepairsContext();
 
         // GET: Devices
+        //List different device types
         public ActionResult Index()
         {
             return View(db.Devices.ToList());
